@@ -3,147 +3,180 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ELS911 — School Infrastructure & Emergency Response</title>
-  <meta name="description" content="ELS911 is a school infrastructure project delivering precision facility mapping, emergency response planning, and certification for K-12 institutions." />
+  <title>ELS911 — School Safety Infrastructure &amp; Precision Location</title>
+  <meta name="description" content="ELS911 delivers precision facility mapping, 3D documentation, and SOC 2-certified emergency response systems for K-12 institutions. Certified annually." />
+  <meta property="og:title" content="ELS911 — School Safety Infrastructure" />
+  <meta property="og:description" content="SOC 2 certified school infrastructure mapping and emergency response planning for K-12." />
+  <meta property="og:type" content="website" />
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" />
+
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231dcf2c'/><text y='.9em' font-size='58' x='6' fill='%23161616' font-weight='bold' font-family='sans-serif'>E</text></svg>" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231a3a6b'/><path d='M0 52 h100 v36 Q100 100 88 100 H12 Q0 100 0 88 Z' fill='%23c0392b'/><text x='50' y='34' font-size='28' fill='white' font-weight='bold' font-family='sans-serif' text-anchor='middle' dominant-baseline='middle'>ELS</text><text x='50' y='72' font-size='28' fill='white' font-weight='bold' font-family='sans-serif' text-anchor='middle' dominant-baseline='middle'>911</text></svg>" />
 </head>
 <body>
 
 <!-- ═══════════════ HEADER ═══════════════ -->
-<header class="header">
-  <a href="#" class="logo">
-    <div class="logo-mark">
-      <div class="logo-mark-top">ELS</div>
-      <div class="logo-mark-bottom">911</div>
-    </div>
-    <span class="logo-text">ELS<span class="nine">911</span></span>
+<header class="header" id="header">
+  <a href="#home" class="logo">
+    <img src="assets/logo_main_lg.png" alt="ELS911" class="logo-img" width="44" height="44" />
+    <span class="logo-wordmark">ELS<span class="logo-nine">911</span></span>
   </a>
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <a href="#services">Services</a>
-    <a href="#industries">Industries Served</a>
+    <a href="#technology">Technology</a>
     <a href="#process">Our Process</a>
-    <a href="#act">Uniform K-12 Act</a>
+    <a href="#industries">Industries</a>
+    <a href="#news">News</a>
+    <a href="#act">K-12 Act</a>
     <a href="#contact">Contact</a>
   </nav>
-  <a href="#contact" class="header-cta">Start Here &rarr;</a>
+  <a href="#contact" class="header-cta">Get Certified &rarr;</a>
+  <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
-<!-- ═══════════════ WELCOME BANNER ═══════════════ -->
-<div class="welcome-banner">
-  WELCOME: Lehigh Career &amp; Technical Institute — Thank you for partnering with ELS911
-</div>
+<!-- ═══════════════ MOBILE NAV ═══════════════ -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
+  <div class="mobile-nav-head">
+    <img src="assets/logo_main_lg.png" alt="ELS911" class="logo-img" width="40" height="40" />
+    <button class="mobile-nav-close" id="menuClose" aria-label="Close menu">&times;</button>
+  </div>
+  <a href="#services">Services</a>
+  <a href="#technology">Technology</a>
+  <a href="#process">Our Process</a>
+  <a href="#industries">Industries</a>
+  <a href="#news">News</a>
+  <a href="#act">K-12 Act</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="btn-primary mobile-nav-cta">Get Certified &rarr;</a>
+</nav>
 
 <!-- ═══════════════ HERO ═══════════════ -->
-<section class="hero" id="home" style="background-image:url('https://img1.wsimg.com/isteam/ip/4501ffb7-9003-48f8-b288-fa36724b1bfe/1022231108_HDR.jpg');background-size:cover;background-position:center;">
-  <div style="position:absolute;inset:0;background:var(--overlay);"></div>
-  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(22,22,22,.85) 0%,rgba(22,22,22,.5) 100%);"></div>
-  <div class="hero-grid"></div>
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-eyebrow">School Infrastructure Project</div>
-      <h1>
-        Get <em>Certified</em><br/>
-        &amp; <em>Certain.</em>
-      </h1>
-      <p>
-        ELS911 is a dedicated <strong style="color:var(--text)">school infrastructure project</strong> —
-        building the foundational mapping, documentation, and emergency response systems
-        that every K-12 facility needs. We turn your building into a known, documented,
-        certifiable asset for administrators and first responders alike.
-      </p>
+<section class="hero" id="home">
+  <div class="hero-bg-map" aria-hidden="true">
+    <img src="assets/S4_Awing_lg.png" alt="" />
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+
+  <div class="container hero-container">
+    <div class="hero-content fade-up">
+      <div class="hero-eyebrow">
+        <span class="hero-dot"></span>
+        School Infrastructure Project
+      </div>
+
+      <div class="hero-stat-alert">
+        <div class="hsa-num">70<span>%</span></div>
+        <div class="hsa-text">of all school safety civil suits focus<br/>in part or whole on <em>&ldquo;report and response failures&rdquo;</em></div>
+      </div>
+
+      <h1>Get <span class="hl">Certified.</span><br/>Get <span class="hl">Certain.</span></h1>
+
+      <p>ELS911 is a <strong>school infrastructure project</strong> — delivering precision facility mapping, 3D documentation, and SOC&nbsp;2&#8209;certified emergency response systems that every K-12 facility needs.</p>
+
+      <div class="hero-badges">
+        <div class="hbadge hbadge-soc">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10" stroke-width="2.5"/></svg>
+          SOC 2 Type II Certified
+        </div>
+        <div class="hbadge hbadge-k12">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          K-12 Mapping Act Compliant
+        </div>
+        <div class="hbadge hbadge-annual">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Certified Annually
+        </div>
+      </div>
+
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Start Here</a>
-        <a href="#process" class="btn-outline">Our Process</a>
+        <a href="#contact" class="btn-primary">Start Here &rarr;</a>
+        <a href="#technology" class="btn-outline on-dark">See Our Technology</a>
       </div>
     </div>
 
-    <div class="hero-panel">
-      <div class="hero-stat">
-        <div class="hero-stat-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    <div class="hero-panel fade-up fade-delay">
+      <div class="hero-cert-row">
+        <div class="hcr-icon hcr-icon-blue">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
         <div>
-          <div class="hero-stat-num">K–12</div>
-          <div class="hero-stat-label">School facilities mapped &amp; certified</div>
+          <div class="hcr-title">SOC 2 Type II Certified</div>
+          <div class="hcr-sub">Third-party verified &middot; Renewed annually</div>
         </div>
       </div>
       <hr class="hero-divider"/>
-      <div class="hero-stat">
-        <div class="hero-stat-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div class="hero-cert-row">
+        <div class="hcr-icon hcr-icon-red">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
         </div>
         <div>
-          <div class="hero-stat-num">Certified</div>
-          <div class="hero-stat-label">Emergency response plans &amp; documentation</div>
+          <div class="hcr-title">Precision Location-Finding</div>
+          <div class="hcr-sub">Room-level accuracy during any emergency</div>
         </div>
       </div>
       <hr class="hero-divider"/>
-      <div class="hero-stat">
-        <div class="hero-stat-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <div class="hero-cert-row">
+        <div class="hcr-icon hcr-icon-blue">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
         </div>
         <div>
-          <div class="hero-stat-num">Rapid</div>
-          <div class="hero-stat-label">First responder access to accurate floor plans</div>
+          <div class="hcr-title">First Responder Integration</div>
+          <div class="hcr-sub">Pre-loaded with local police, fire &amp; EMS</div>
         </div>
       </div>
       <hr class="hero-divider"/>
-      <div class="hero-infra">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-        School Infrastructure Project
+      <div class="hero-cert-row">
+        <div class="hcr-icon hcr-icon-blue">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="hcr-title">Rapid Emergency Response</div>
+          <div class="hcr-sub">Accurate floor plans accessible in seconds</div>
+        </div>
       </div>
-      <div class="hero-cert">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-        Compliant with Uniform K-12 Mapping Act
+      <div class="hero-k12-tag">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Uniform K-12 Mapping Act Compliant
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════ INFRA BANNER ═══════════════ -->
-<div class="infra-banner">
-  <div class="infra-banner-inner">
-    <div class="infra-banner-label">School Infrastructure Project</div>
-    <div class="infra-banner-items">
-      <div class="infra-banner-item">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-        Precision Facility Mapping
-      </div>
-      <div class="infra-banner-item">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Emergency Response Plans
-      </div>
-      <div class="infra-banner-item">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-        K-12 Certification
-      </div>
-      <div class="infra-banner-item">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        State College, PA
-      </div>
+<!-- ═══════════════ TRUST BAR ═══════════════ -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+      SOC 2 Type II Certified
     </div>
-  </div>
-</div>
-
-<!-- ═══════════════ STRIP ═══════════════ -->
-<div class="strip" style="display:none;">
-  <div class="strip-inner">
-    <div class="strip-item">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      Innovation Park at Penn State &mdash; State College, PA
+    <span class="trust-sep">&bull;</span>
+    <div class="trust-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      K-12 Mapping Act Compliant
     </div>
-    <div class="strip-item">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      814-404-7538
+    <span class="trust-sep">&bull;</span>
+    <div class="trust-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      Precision Facility Mapping
     </div>
-    <div class="strip-item">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      INFO@ELS911.COM
+    <span class="trust-sep">&bull;</span>
+    <div class="trust-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Certified Annually
     </div>
-    <div class="strip-item">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      Uniform K-12 Mapping Act Compliant
+    <span class="trust-sep">&bull;</span>
+    <div class="trust-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+      First Responder Integration
     </div>
   </div>
 </div>
@@ -151,23 +184,46 @@
 <!-- ═══════════════ SERVICES ═══════════════ -->
 <section class="services" id="services">
   <div class="container">
-    <div class="section-tag">ELS911 Services</div>
-    <h2 class="section-title">Comprehensive School <em>Safety Solutions</em></h2>
-    <p class="section-body">
-      From initial site assessment through ongoing support, ELS911 delivers the tools and documentation
-      that keep your school community safe and your administration prepared.
-    </p>
-    <div class="services-grid">
+    <div class="section-header fade-up">
+      <div class="section-tag">ELS911 Services</div>
+      <h2 class="section-title">Comprehensive School Safety &amp;<br/><em>Precision Location-Finding During an Emergency Event</em></h2>
+      <p class="section-body">From initial site assessment through ongoing certification, ELS911 delivers the tools and documentation that keep your school community protected.</p>
+      <div class="soc2-inline-badge fade-up">
+        <!-- SOC 2 Official Badge -->
+        <div class="soc2-badge-official">
+          <div class="soc2-badge-inner">
+            <div class="soc2-aicpa">AICPA</div>
+            <div class="soc2-soc">SOC</div>
+            <div class="soc2-num">2</div>
+            <div class="soc2-type">TYPE II</div>
+            <div class="soc2-label">SERVICE ORGANIZATION CONTROLS</div>
+          </div>
+        </div>
+        <div class="soc2-badge-text">
+          <div class="soc2-badge-title">SOC 2 Type II Certified</div>
+          <div class="soc2-badge-desc">Certified annually, including third-party SOC 2 certification through an independent AICPA-accredited auditor. Our security controls, data handling, and operational processes are verified every year — not just once.</div>
+        </div>
+      </div>
+    </div>
 
-      <div class="service-card">
+    <div class="services-grid">
+      <div class="service-card fade-up">
         <div class="service-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
         </div>
-        <h3>Facility Mapping</h3>
-        <p>Precise, accurate 2D floor plans of every room, corridor, entrance, and utility shutoff — formatted for first responder use and digital distribution.</p>
+        <h3>Precision Facility Mapping</h3>
+        <p>LiDAR-captured, survey-grade 2D floor plans of every room, corridor, entrance, and utility shutoff — formatted for first responder use and digital distribution.</p>
       </div>
 
-      <div class="service-card">
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Precision Location-Finding</h3>
+        <p>Room-level location accuracy during any emergency event — giving responders the exact position of personnel, threats, and critical infrastructure the moment they need it.</p>
+      </div>
+
+      <div class="service-card fade-up">
         <div class="service-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
@@ -175,38 +231,108 @@
         <p>Structured, actionable emergency plans developed with your administration and aligned with local law enforcement and fire department protocols.</p>
       </div>
 
-      <div class="service-card">
+      <div class="service-card fade-up">
         <div class="service-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg>
         </div>
-        <h3>Staff Certification</h3>
-        <p>Training and certification programs for administrators and staff so your team is confident and prepared — not just compliant on paper.</p>
+        <h3>Staff &amp; Administration Certification</h3>
+        <p>Training and certification programs for administrators and staff — so your team is confident and prepared, not just compliant on paper.</p>
       </div>
 
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        </div>
-        <h3>Site Assessment</h3>
-        <p>On-site evaluation of vulnerabilities, access points, and security gaps, with a prioritised remediation report tailored to your facility.</p>
-      </div>
-
-      <div class="service-card">
+      <div class="service-card fade-up">
         <div class="service-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
         </div>
         <h3>Compliance Documentation</h3>
-        <p>Full documentation packages for state and federal compliance requirements, including Uniform K-12 Mapping Act filings.</p>
+        <p>Full documentation packages for state and federal compliance requirements, including Uniform K-12 Mapping Act filings and annual re-certification records.</p>
       </div>
 
-      <div class="service-card">
+      <div class="service-card fade-up">
         <div class="service-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
         </div>
         <h3>First Responder Integration</h3>
-        <p>Coordination with local police, fire, and EMS to ensure your facility maps and plans are pre-loaded and accessible during an incident.</p>
+        <p>Coordination with local police, fire, and EMS to ensure your facility maps and plans are pre-loaded and accessible during an incident — not found for the first time during one.</p>
       </div>
+    </div>
+  </div>
+</section>
 
+<!-- ═══════════════ TECHNOLOGY / 3D SHOWCASE ═══════════════ -->
+<section class="technology" id="technology">
+  <div class="container">
+    <div class="tech-header fade-up">
+      <div class="section-tag" style="background:rgba(26,58,107,.12);color:#1a3a6b;border-color:rgba(26,58,107,.25);">3D Facility Documentation</div>
+      <h2 class="section-title">See Inside <em>Every Space</em></h2>
+      <p class="section-body">ELS911's 3D dollhouse models and precision floor plans give administrators and first responders a complete, navigable picture of your entire facility — from every angle.</p>
+    </div>
+
+    <div class="tech-layout">
+      <div class="tech-main fade-up">
+        <div class="tech-img-wrap">
+          <img src="assets/dollhouse_eg.jpg" alt="ELS911 3D Dollhouse Model — School Facility" loading="lazy" />
+          <div class="tech-img-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            3D Dollhouse Model
+          </div>
+        </div>
+      </div>
+      <div class="tech-points fade-up fade-delay">
+        <h3>Why 3D Documentation Changes Everything</h3>
+        <ul class="tech-list">
+          <li>
+            <div class="tech-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div><strong>Complete spatial awareness</strong> — every room, hallway, stairwell, and utility space mapped in three dimensions.</div>
+          </li>
+          <li>
+            <div class="tech-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div><strong>Instant responder orientation</strong> — first responders can virtually walk the building before they arrive on scene.</div>
+          </li>
+          <li>
+            <div class="tech-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div><strong>Living documentation</strong> — updated as your facility changes, always current, always accurate.</div>
+          </li>
+          <li>
+            <div class="tech-list-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div><strong>Multi-layer data</strong> — utility shutoffs, rally points, access points, and room IDs overlaid on every model.</div>
+          </li>
+        </ul>
+        <div class="tech-cert-note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          All models and documentation are produced and stored under our SOC 2 Type II certified infrastructure.
+        </div>
+      </div>
+    </div>
+
+    <!-- Floor plan grid -->
+    <div class="floor-plan-section fade-up">
+      <h3 class="fp-heading">Precision Floor Plans — Sample Deliverables</h3>
+      <div class="floor-plan-grid">
+        <div class="fp-card">
+          <div class="fp-img-wrap">
+            <img src="assets/A_wing.png" alt="A Wing Floor Plan" loading="lazy" />
+          </div>
+          <div class="fp-label">A Wing</div>
+        </div>
+        <div class="fp-card">
+          <div class="fp-img-wrap">
+            <img src="assets/B_Awing_N.png" alt="B Wing Floor Plan" loading="lazy" />
+          </div>
+          <div class="fp-label">B Wing</div>
+        </div>
+        <div class="fp-card">
+          <div class="fp-img-wrap">
+            <img src="assets/Cwing_B.png" alt="C Wing Floor Plan" loading="lazy" />
+          </div>
+          <div class="fp-label">C Wing</div>
+        </div>
+        <div class="fp-card">
+          <div class="fp-img-wrap">
+            <img src="assets/S4_Awing.png" alt="S4 Wing Floor Plan" loading="lazy" />
+          </div>
+          <div class="fp-label">S4 Wing</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -214,44 +340,181 @@
 <!-- ═══════════════ INFRASTRUCTURE HIGHLIGHT ═══════════════ -->
 <section class="infra-section" id="infrastructure">
   <div class="container">
-    <div>
-      <div class="section-tag" style="background:rgba(192,57,43,.15);color:#f9a5a0;border-color:rgba(249,165,160,.3);">School Infrastructure</div>
-      <h2 class="section-title" style="color:#fff;margin-bottom:.75rem;">
-        Your building is <em style="color:var(--coral);">critical infrastructure</em>
-      </h2>
-      <p class="section-body" style="color:rgba(255,255,255,.65);margin-bottom:1.5rem;">
-        ELS911 treats your school facility the same way engineers treat bridges and power grids —
-        as infrastructure that must be documented, maintained, and accessible to responders at any moment.
-        A school without a current, accurate floor plan is infrastructure without a blueprint.
+    <div class="infra-left fade-up">
+      <div class="section-tag" style="background:rgba(192,57,43,.18);color:#f9a5a0;border-color:rgba(249,165,160,.3);">School Infrastructure</div>
+      <h2 class="section-title" style="color:#fff;">Your building is<br/><em style="color:#f97566;">critical infrastructure</em></h2>
+      <p style="color:rgba(255,255,255,.65);font-size:1rem;line-height:1.75;max-width:480px;margin-bottom:1.5rem;">
+        ELS911 treats your school facility the same way engineers treat bridges and power grids — as infrastructure that must be documented, maintained, and accessible to responders at any moment. A school without a current, accurate floor plan is infrastructure without a blueprint.
       </p>
-      <a href="#contact" class="btn-primary">Build Your Infrastructure</a>
+      <a href="#contact" class="btn-primary">Build Your Infrastructure &rarr;</a>
     </div>
-    <div class="infra-pillars">
+    <div class="infra-right fade-up fade-delay">
       <div class="infra-pillar">
-        <div class="infra-pillar-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-        </div>
+        <div class="ip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
         <div>
-          <h4>Accurate Floor Plans</h4>
-          <p>LiDAR-captured, precision-mapped 2D floor plans of every space in your facility — the foundational layer of school infrastructure.</p>
+          <h4>Survey-Grade Floor Plans</h4>
+          <p>LiDAR-captured, precision-mapped plans of every space — the foundational layer of school infrastructure.</p>
         </div>
       </div>
       <div class="infra-pillar">
-        <div class="infra-pillar-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81"/><path d="M1 1l22 22"/></svg>
-        </div>
+        <div class="ip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <div>
-          <h4>First Responder Access</h4>
-          <p>Your maps, pre-loaded and available to local police, fire, and EMS before an incident — not discovered for the first time during one.</p>
+          <h4>Pre-Loaded Responder Access</h4>
+          <p>Your maps, available to local police, fire, and EMS before an incident — not discovered for the first time during one.</p>
         </div>
       </div>
       <div class="infra-pillar">
-        <div class="infra-pillar-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-        </div>
+        <div class="ip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
         <div>
           <h4>Living Documentation</h4>
-          <p>Infrastructure doesn't stand still. ELS911 updates your maps as your facility changes, keeping documentation current and compliant.</p>
+          <p>ELS911 updates your maps as your facility changes — keeping documentation current, certified, and compliant.</p>
+        </div>
+      </div>
+      <div class="infra-pillar infra-pillar-cert">
+        <div class="ip-icon ip-icon-gold"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M12 13v9M9 19l3 3 3-3"/></svg></div>
+        <div>
+          <h4>SOC 2 Certified — Annually</h4>
+          <p>Certified annually, including independent SOC 2 Third Party Certification. Your data and documentation are protected at the highest standard.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PROCESS ═══════════════ -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag">Our Process</div>
+      <h2 class="section-title">How ELS911 <em>Works</em></h2>
+      <p class="section-body">A structured, proven engagement model that gets your school mapped, certified, and integrated with first responders — with minimal disruption to your school day.</p>
+    </div>
+
+    <div class="process-layout">
+      <div class="process-steps fade-up">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h3>Initial Consultation</h3>
+            <p>We meet with your administration to understand your facility, existing safety plans, local emergency contacts, and compliance requirements.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h3>On-Site Assessment &amp; LiDAR Scan</h3>
+            <p>Our assessors visit your facility and conduct a complete walkthrough, capturing every space with precision LiDAR scanning technology.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h3>Floor Plan &amp; 3D Model Production</h3>
+            <p>Point cloud data is processed into precise 2D floor plans and 3D dollhouse models — annotated for emergency use with entrances, exits, utility shutoffs, and room IDs.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h3>Emergency Plan Development</h3>
+            <p>Working with your team and local first responders, we develop a comprehensive emergency response plan tied directly to your facility maps.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <h3>Certification &amp; Training</h3>
+            <p>Staff are trained on the plan. Administration receives official certification documentation. First responders receive pre-loaded access to your floor plans.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">6</div>
+          <div class="step-content">
+            <h3>Annual Renewal &amp; SOC 2 Recertification</h3>
+            <p>Annual reviews keep your certification current and your community protected. Includes independent SOC 2 Third Party recertification every year — not just once.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-aside fade-up fade-delay">
+        <div class="soc2-official-card">
+          <div class="soc2-card-header">
+            <div class="soc2-card-logo">
+              <!-- Official-style SOC 2 Badge -->
+              <div class="soc2-seal">
+                <div class="soc2-seal-ring">
+                  <div class="soc2-seal-inner">
+                    <div class="ss-aicpa">AICPA</div>
+                    <div class="ss-soc">SOC</div>
+                    <div class="ss-num">2</div>
+                    <div class="ss-type">TYPE&nbsp;II</div>
+                  </div>
+                </div>
+                <div class="soc2-seal-footer">SERVICE ORGANIZATION CONTROLS</div>
+              </div>
+            </div>
+            <div>
+              <div class="soc2-card-title">SOC 2 Type II</div>
+              <div class="soc2-card-sub">AICPA Certified</div>
+            </div>
+          </div>
+          <ul class="soc2-card-list">
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Security &amp; Availability Controls</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Confidentiality &amp; Processing Integrity</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Independent Third-Party Auditor</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Renewed Every Year — No Exceptions</li>
+          </ul>
+          <div class="soc2-card-note">This is not a self-certification. ELS911 undergoes an independent, accredited SOC 2 audit annually to maintain this designation.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ DELIVERABLES GALLERY ═══════════════ -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag">Our Deliverables</div>
+      <h2 class="section-title">Signs, Maps &amp; <em>On-Site Documentation</em></h2>
+      <p class="section-body">ELS911 delivers physical and digital documentation — from posted emergency maps and wayfinding signage installed throughout your facility to precision floor plans used by first responders.</p>
+    </div>
+
+    <div class="gallery-grid fade-up">
+      <div class="gallery-item gallery-item-tall">
+        <div class="gallery-img-wrap">
+          <img src="assets/our_signage.jpeg" alt="ELS911 Emergency Signage — On-Site Installation" loading="lazy" />
+        </div>
+        <div class="gallery-caption">
+          <strong>Posted Emergency Signage</strong>
+          <span>On-site wayfinding &amp; emergency maps installed in every zone</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img-wrap gallery-img-plan">
+          <img src="assets/S4_Awing_lg.png" alt="S4 Wing Precision Floor Plan" loading="lazy" />
+        </div>
+        <div class="gallery-caption">
+          <strong>Precision Floor Plans</strong>
+          <span>LiDAR-captured, annotated for emergency response</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img-wrap">
+          <img src="assets/dollhouse_eg.jpg" alt="3D Dollhouse Model" loading="lazy" />
+        </div>
+        <div class="gallery-caption">
+          <strong>3D Dollhouse Models</strong>
+          <span>Full-facility spatial documentation, navigable from any angle</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img-wrap gallery-img-plan">
+          <img src="assets/school_safety_alphebet.png" alt="School Safety Reference Guide" loading="lazy" />
+        </div>
+        <div class="gallery-caption">
+          <strong>Safety Reference Materials</strong>
+          <span>Distributed to staff, administration, and first responders</span>
         </div>
       </div>
     </div>
@@ -259,228 +522,173 @@
 </section>
 
 <!-- ═══════════════ INDUSTRIES ═══════════════ -->
-<section class="industries" id="industries" style="background:var(--dark-2);padding:5rem 0;">
+<section class="industries" id="industries">
   <div class="container">
-    <div class="section-tag">Industries Served</div>
-    <h2 class="section-title">Built for <em>Educational Institutions</em></h2>
-    <p class="section-body">
-      ELS911 works with every type of educational facility, from single-building elementary schools
-      to large multi-campus career and technical education centers.
-    </p>
+    <div class="section-header fade-up">
+      <div class="section-tag">Industries Served</div>
+      <h2 class="section-title">Built for <em>Educational Institutions</em></h2>
+      <p class="section-body">ELS911 works with every type of educational facility — from single-building elementary schools to large multi-campus vocational centers.</p>
+    </div>
     <div class="industries-grid">
-
-      <div class="industry-card">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <div class="industry-card fade-up">
+        <div class="ic-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
         <h3>K-12 Public Schools</h3>
         <p>Elementary, middle, and high schools — public and charter.</p>
       </div>
-
-      <div class="industry-card">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+      <div class="industry-card fade-up">
+        <div class="ic-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
         <h3>Career &amp; Technical Education</h3>
         <p>CTE and vocational institutions with complex, multi-use facilities.</p>
       </div>
-
-      <div class="industry-card">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+      <div class="industry-card fade-up">
+        <div class="ic-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
         <h3>Private &amp; Independent Schools</h3>
         <p>Private schools seeking voluntary compliance and best-practice safety standards.</p>
       </div>
-
-      <div class="industry-card">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      <div class="industry-card fade-up">
+        <div class="ic-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
         <h3>School Districts</h3>
         <p>District-wide mapping programs covering multiple campuses under one coordinated plan.</p>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ═══════════════ PROCESS ═══════════════ -->
-<section class="process" id="process" style="background-image:url('https://img1.wsimg.com/isteam/ip/4501ffb7-9003-48f8-b288-fa36724b1bfe/Untitled%20(79).png');background-size:cover;background-position:center;position:relative;">
-<div style="position:absolute;inset:0;background:rgba(241,241,241,.96);"></div>
-<div style="position:relative;z-index:1;">
+<!-- ═══════════════ IN THE NEWS ═══════════════ -->
+<section class="news" id="news">
   <div class="container">
-    <div class="section-tag">Our Process</div>
-    <h2 class="section-title">How ELS911 <em>Works</em></h2>
-    <p class="section-body">
-      A structured, proven engagement model that gets your school mapped, certified,
-      and integrated with first responders — with minimal disruption to your school day.
-    </p>
-    <div class="process-steps">
-
-      <div class="process-step">
-        <div class="step-num-circle">1</div>
-        <div class="step-content">
-          <h3>Initial Consultation</h3>
-          <p>We meet with your administration to understand your facility, existing safety plans, local emergency contacts, and compliance requirements. No obligation — just clarity.</p>
-        </div>
-      </div>
-
-      <div class="process-step">
-        <div class="step-num-circle">2</div>
-        <div class="step-content">
-          <h3>On-Site Assessment &amp; LiDAR Scan</h3>
-          <p>Our assessors visit your facility and conduct a complete walkthrough, capturing every space with precision LiDAR scanning technology to produce accurate, detailed floor plans.</p>
-        </div>
-      </div>
-
-      <div class="process-step">
-        <div class="step-num-circle">3</div>
-        <div class="step-content">
-          <h3>Floor Plan Production</h3>
-          <p>Point cloud data is processed into precise 2D floor plans annotated for emergency use — entrances, exits, utility shutoffs, rally points, and room IDs all clearly marked.</p>
-        </div>
-      </div>
-
-      <div class="process-step">
-        <div class="step-num-circle">4</div>
-        <div class="step-content">
-          <h3>Emergency Plan Development</h3>
-          <p>Working with your team and local first responders, we develop a comprehensive emergency response plan tied directly to your facility maps.</p>
-        </div>
-      </div>
-
-      <div class="process-step">
-        <div class="step-num-circle">5</div>
-        <div class="step-content">
-          <h3>Certification &amp; Training</h3>
-          <p>Staff are trained on the plan. Administration receives official certification documentation. First responders receive pre-loaded access to your floor plans.</p>
-        </div>
-      </div>
-
-      <div class="process-step">
-        <div class="step-num-circle">6</div>
-        <div class="step-content">
-          <h3>Ongoing Updates &amp; Support</h3>
-          <p>As your facility changes, we update your maps and plans. Annual reviews keep your certification current and your community protected.</p>
-        </div>
-      </div>
-
+    <div class="section-header fade-up">
+      <div class="section-tag">In the News</div>
+      <h2 class="section-title">ELS911 in the <em>Community</em></h2>
+      <p class="section-body">ELS911 is making an impact across Pennsylvania — partnering with schools, first responders, and legislators to advance safer educational environments.</p>
     </div>
+    <div class="news-grid">
+      <div class="news-card fade-up">
+        <div class="news-tag">Legislation</div>
+        <h3>Uniform K-12 Mapping Act Advances in Pennsylvania</h3>
+        <p>The Uniform K-12 Mapping Act continues to gain support, requiring standardized facility maps accessible to first responders at all K-12 institutions across the state.</p>
+      </div>
+      <div class="news-card fade-up">
+        <div class="news-tag">Safety</div>
+        <h3>Report &amp; Response Failures Drive School Safety Litigation</h3>
+        <p>New research confirms that 70% of school safety civil suits cite documentation and response failures — making certified emergency planning a legal imperative, not just best practice.</p>
+      </div>
+      <div class="news-card fade-up">
+        <div class="news-tag">Community</div>
+        <h3>ELS911 Expands to Serve More School Districts</h3>
+        <p>Growing demand from school administrators and law enforcement has ELS911 expanding its assessor team and geographic reach across central Pennsylvania and beyond.</p>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:2rem;" class="fade-up">
+      <a href="mailto:info@els911.com" class="btn-outline">Media Inquiries &rarr;</a>
+    </p>
   </div>
 </section>
 
 <!-- ═══════════════ UNIFORM K-12 ACT ═══════════════ -->
 <div class="act-cta" id="act">
   <div class="container">
-    <div class="act-cta-text">
+    <div class="act-text fade-up">
       <h2>Uniform <span>K-12</span> Mapping Act</h2>
-      <p>
-        The Uniform K-12 Mapping Act requires schools to maintain accurate, standardised facility maps
-        accessible to emergency responders. ELS911 was built specifically to help schools achieve and
-        maintain full compliance — efficiently, affordably, and without the guesswork.
-      </p>
+      <p>The Uniform K-12 Mapping Act requires schools to maintain accurate, standardized facility maps accessible to emergency responders. ELS911 was built specifically to help schools achieve and maintain full compliance — efficiently, and without the guesswork.</p>
     </div>
-    <a href="#contact" class="btn-primary" style="white-space:nowrap;">Learn How We Help &rarr;</a>
+    <a href="#contact" class="btn-primary fade-up" style="white-space:nowrap;">Learn How We Help &rarr;</a>
   </div>
 </div>
 
 <!-- ═══════════════ CONTACT ═══════════════ -->
 <section class="contact" id="contact">
   <div class="container">
-    <div class="section-tag">Contact</div>
-    <h2 class="section-title">Get <em>Certified &amp; Certain.</em></h2>
+    <div class="section-header fade-up">
+      <div class="section-tag">Contact</div>
+      <h2 class="section-title">Get <em>Certified &amp; Certain.</em></h2>
+    </div>
     <div class="contact-grid">
-
-      <div class="contact-info">
+      <div class="contact-info fade-up">
         <div class="contact-item">
           <div class="contact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
           <div>
             <h4>Address</h4>
             <p>Innovation Park at Penn State<br/>200 Innovation Blvd.<br/>State College, PA 16801</p>
           </div>
         </div>
-
         <div class="contact-item">
           <div class="contact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           </div>
           <div>
             <h4>Phone</h4>
             <a href="tel:8144047538">814-404-7538</a>
           </div>
         </div>
-
         <div class="contact-item">
           <div class="contact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
           <div>
             <h4>Email</h4>
-            <a href="mailto:info@els911.com">INFO@ELS911.COM</a>
+            <a href="mailto:info@els911.com">info@els911.com</a>
           </div>
         </div>
-
         <div class="contact-item">
           <div class="contact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
           <div>
             <h4>Hours</h4>
             <p>Monday – Friday, 9am – 5pm EST</p>
           </div>
         </div>
+
+        <!-- SOC 2 badge in contact sidebar -->
+        <div class="contact-soc2">
+          <div class="soc2-seal soc2-seal-sm">
+            <div class="soc2-seal-ring">
+              <div class="soc2-seal-inner">
+                <div class="ss-aicpa">AICPA</div>
+                <div class="ss-soc">SOC</div>
+                <div class="ss-num">2</div>
+                <div class="ss-type">TYPE&nbsp;II</div>
+              </div>
+            </div>
+            <div class="soc2-seal-footer">SERVICE ORGANIZATION CONTROLS</div>
+          </div>
+          <div class="contact-soc2-text">
+            <strong>SOC 2 Type II Certified</strong><br/>
+            Your information is handled under our independently verified, annually renewed SOC 2 certified framework.
+          </div>
+        </div>
       </div>
 
-      <div class="contact-form-box">
+      <div class="contact-form-box fade-up fade-delay">
         <h3>Send Us a Message</h3>
         <form action="https://formspree.io/f/info@els911.com" method="POST">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your full name" required />
+            <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="school">School / District</label>
+            <input type="text" id="school" name="school" placeholder="School or district name" />
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@school.edu" required />
+            <input type="email" id="email" name="email" placeholder="you@school.edu" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" autocomplete="tel" />
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell us about your school and what you need..."></textarea>
+            <textarea id="message" name="message" placeholder="Tell us about your school and what you need..." rows="4"></textarea>
           </div>
-          <button type="submit" class="btn-primary" style="width:100%;border:none;cursor:pointer;font-family:'Lato',sans-serif;font-size:.92rem;">
-            Send Message
-          </button>
-          <p class="form-privacy">
-            ELS911 respects your privacy and will never sell or share your information.
-            To unsubscribe from communications, contact us at <a href="tel:8144047538" style="color:var(--text-muted);">814-404-7538</a> or
-            email <a href="mailto:ericp@els911.com" style="color:var(--text-muted);">ericp@els911.com</a>.
-          </p>
+          <button type="submit" class="btn-primary form-submit">Send Message &rarr;</button>
+          <p class="form-privacy">ELS911 respects your privacy and will never sell or share your information. Contact us at <a href="mailto:info@els911.com">info@els911.com</a> to unsubscribe.</p>
         </form>
       </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ CAREERS ═══════════════ -->
-<section class="careers" id="careers">
-  <div class="container">
-    <div class="section-tag">We're Hiring</div>
-    <h2 class="section-title">Join Our <em>Team</em></h2>
-    <p class="section-body">
-      Help us make schools safer. ELS911 is growing and we're looking for motivated people
-      to join our mission.
-    </p>
-    <div class="careers-grid">
-
-      <div class="career-card">
-        <span class="career-type">Field Role</span>
-        <h3>Assessors</h3>
-        <p>Conduct on-site facility assessments and LiDAR scans at school campuses. You'll be the face of ELS911 in the field, working directly with school administrators.</p>
-        <a href="mailto:ericp@els911.com?subject=Assessor Application" class="btn-outline" style="text-align:center;">Apply Now</a>
-      </div>
-
-      <div class="career-card">
-        <span class="career-type">Office / Remote</span>
-        <h3>Sales &amp; Marketing</h3>
-        <p>Help grow ELS911's reach across Pennsylvania and beyond. Identify new school district partnerships, manage outreach, and tell the ELS911 story.</p>
-        <a href="mailto:ericp@els911.com?subject=Sales and Marketing Application" class="btn-outline" style="text-align:center;">Apply Now</a>
-      </div>
-
     </div>
   </div>
 </section>
@@ -490,40 +698,45 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="#" class="logo">
-          <div class="logo-mark">
-            <div class="logo-mark-top">ELS</div>
-            <div class="logo-mark-bottom">911</div>
-          </div>
-          <span class="logo-text">ELS<span class="nine">911</span></span>
+        <a href="#home" class="footer-logo">
+          <img src="assets/logo_main_lg.png" alt="ELS911" width="40" height="40" loading="lazy" />
+          <span class="logo-wordmark">ELS<span class="logo-nine">911</span></span>
         </a>
-        <p>School Mapping and Emergency Response. Keeping students, staff, and first responders certain when it matters most.</p>
+        <p>School Mapping, 3D Documentation &amp; Emergency Response. Keeping students, staff, and first responders certain when it matters most.</p>
+        <div class="footer-badges">
+          <span class="footer-badge">SOC 2 Certified</span>
+          <span class="footer-badge">K-12 Compliant</span>
+          <span class="footer-badge">Certified Annually</span>
+        </div>
       </div>
       <div class="footer-links">
-        <div class="footer-links-col">
+        <div class="footer-col">
           <h4>Services</h4>
-          <a href="#services">Facility Mapping</a>
+          <a href="#services">Precision Mapping</a>
+          <a href="#services">Location-Finding</a>
           <a href="#services">Emergency Planning</a>
           <a href="#services">Staff Certification</a>
-          <a href="#services">Site Assessment</a>
+          <a href="#services">Compliance Docs</a>
         </div>
-        <div class="footer-links-col">
+        <div class="footer-col">
           <h4>Company</h4>
+          <a href="#technology">Our Technology</a>
           <a href="#process">Our Process</a>
           <a href="#industries">Industries</a>
+          <a href="#news">In the News</a>
           <a href="#act">Uniform K-12 Act</a>
-          <a href="#careers">Careers</a>
         </div>
-        <div class="footer-links-col">
+        <div class="footer-col">
           <h4>Contact</h4>
           <a href="tel:8144047538">814-404-7538</a>
-          <a href="mailto:info@els911.com">INFO@ELS911.COM</a>
+          <a href="mailto:info@els911.com">info@els911.com</a>
           <a href="#contact">Send a Message</a>
+          <p class="footer-addr">200 Innovation Blvd.<br/>State College, PA 16801</p>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Copyright &copy; 2025 ELS911 — All Rights Reserved.</p>
+      <p>&copy; 2025 ELS911 &mdash; All Rights Reserved. SOC 2 Type II Certified.</p>
       <div class="footer-bottom-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms &amp; Conditions</a>
