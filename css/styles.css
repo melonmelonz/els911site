@@ -930,7 +930,7 @@ section { scroll-margin-top: var(--header-h); }
 }
 .contact-grid {
   display: grid; grid-template-columns: 1fr 1.1fr;
-  gap: 3.5rem; margin-top: 2.5rem; align-items: start;
+  gap: 3.5rem; margin-top: 1.5rem; align-items: start;
 }
 .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
 .contact-item { display: flex; gap: .9rem; align-items: flex-start; }
