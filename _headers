@@ -2,7 +2,9 @@
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: geolocation=(), camera=(), microphone=()
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; form-action 'self' https://formspree.io; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
 
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
@@ -14,4 +16,10 @@
   Cache-Control: public, max-age=31536000, immutable
 
 /index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/privacy.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/terms.html
   Cache-Control: public, max-age=0, must-revalidate
