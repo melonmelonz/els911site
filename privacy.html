@@ -6,6 +6,8 @@
   <title>Privacy Policy — ELS911</title>
   <meta name="description" content="ELS911 Privacy Policy — how we collect, use, and protect information from clients, school administrators, and visitors." />
   <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://els911.com/privacy" />
+  <meta name="theme-color" content="#0d1e3d" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,7 +34,27 @@
     <a href="https://els911-portal-7g2.pages.dev" target="_blank" rel="noopener">Client Portal &#8599;</a>
   </nav>
   <a href="/#contact" class="header-cta">Get Certified &rarr;</a>
+  <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </header>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
+  <div class="mobile-nav-head">
+    <img src="assets/logo-lg.png" alt="ELS911" class="logo-img" width="40" height="40" />
+    <button class="mobile-nav-close" id="menuClose" aria-label="Close menu">&times;</button>
+  </div>
+  <a href="/#services">Services</a>
+  <a href="/#technology">Technology</a>
+  <a href="/#process">Our Process</a>
+  <a href="/#industries">Industries</a>
+  <a href="/#news">News</a>
+  <a href="/#act">K-12 Act</a>
+  <a href="/#contact">Contact</a>
+  <a href="https://els911-portal-7g2.pages.dev" target="_blank" rel="noopener">Client Portal &#8599;</a>
+  <a href="/#contact" class="btn-primary mobile-nav-cta">Get Certified &rarr;</a>
+</nav>
 
 <main class="legal-page">
   <div class="container">
@@ -107,12 +129,13 @@
     <div class="footer-bottom">
       <p>&copy; 2026 ELS911 &mdash; All Rights Reserved. SOC 2 Type II Certified.</p>
       <div class="footer-bottom-links">
-        <a href="/privacy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms &amp; Conditions</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms &amp; Conditions</a>
       </div>
     </div>
   </div>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>
